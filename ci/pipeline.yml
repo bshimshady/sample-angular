@@ -1,0 +1,22 @@
+---
+resources:
+  - name: ci-git
+    type: git
+    source: &default-git
+      uri: {{sample-git-repo}}
+      branch: {{sample-branch}}
+      private_key: {{github-private-key}}
+      paths:
+        - ci
+  - name: app-git
+    type: git
+       <<: *default-git
+
+jobs:
+  - name: test-app
+    plan:
+      - get: app-git
+        trigger: true
+      - get: ci-git
+      - task: test
+          file: test.yml
