@@ -10,6 +10,7 @@ resources:
         - ci
   - name: app-git
     type: git
+    source:
        <<: *default-git
 
 jobs:
@@ -19,4 +20,6 @@ jobs:
         trigger: true
       - get: ci-git
       - task: test
-          file: test.yml
+        file: ci-git/ci/test.yml
+
+
