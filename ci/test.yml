@@ -8,11 +8,10 @@ image_resource:
     tag: '1.7.4'
 
 inputs: 
-  - name: ci-git
-  - name: app-git
+- name: ci-git
+- name: app-git
 
 run:
-  path: ci-git/test-angular.sh
-  args: app-git
-
-
+  path: ci-git/ci/test-angular.sh
+  # args: 
+  # - app-git

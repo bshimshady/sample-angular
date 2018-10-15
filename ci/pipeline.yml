@@ -20,6 +20,6 @@ jobs:
         trigger: true
       - get: ci-git
       - task: test
-        file: ci-git/ci/test.yml
+        file: ci-git/test.yml
 
 
