@@ -13,5 +13,5 @@ inputs:
 
 run:
   path: ci-git/ci/test-angular.sh
-  # args: 
-  # - app-git
+  args: 
+  - app-git
